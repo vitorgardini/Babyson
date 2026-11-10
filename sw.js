@@ -1,5 +1,5 @@
 // Baby’sOn — cache simples para abrir offline
-const CACHE = "babyson-v2";
+const CACHE = "babyson-v3";
 const ARQUIVOS = ["./", "./index.html", "./manifest.json", "./icon-180.png", "./icon-512.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ARQUIVOS)).then(() => self.skipWaiting()));
