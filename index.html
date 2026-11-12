@@ -144,7 +144,7 @@ nav#tabs #navp button{display:block;width:100%;text-align:left;margin:0;padding:
 <div class="kpis" id="vk"></div>
 <div class="row" style="margin-top:10px"><label style="flex-direction:row;align-items:center;gap:8px"><input type="checkbox" id="vf">Mostrar só as pendentes</label></div>
 <div id="vl"></div>
-<div class="note">Fonte: Calendário de Vacinação da Sociedade Brasileira de Pediatria (SBP), atualização 2026/2027, para crianças e adolescentes saudáveis. A coluna em negrito mostra o que o SUS oferece no mesmo esquema ou se a dose é só da rede privada. A data prevista é o nascimento mais a idade indicada. “Sem registro” significa que a data prevista passou e falta anotar. A SBP recomenda mais vacinas que o SUS, e os esquemas mudam: confirme com o pediatra e com a UBS (alguns itens, como a hepatite A, variam entre os calendários).</div></section>
+<div class="note">Fonte: Calendário de Vacinação da Sociedade Brasileira de Pediatria (SBP), atualização 2026/2027 (publicada em julho de 2026), para crianças e adolescentes saudáveis; o que o SUS oferece segue a mesma publicação. A coluna em negrito mostra o que o SUS oferece no mesmo esquema ou se a dose é só da rede privada. A data prevista é o nascimento mais a idade indicada. “Sem registro” significa que a data prevista passou e falta anotar. Na hepatite A, a SBP recomenda 2 doses a partir de 12 meses, e o SUS aplica 1 dose aos 15 meses. Os esquemas mudam com o tempo e variam com a vacina usada: confirme com o pediatra e com a UBS.</div></section>
 <section><h2>Outras vacinas e campanhas</h2><div class="row" data-form="ov"><label>Vacina<input type="text" data-f="nome" data-req placeholder="Ex.: Meningocócica B"></label><label>Data<input type="date" data-f="d"></label><label>Onde<select data-f="onde"><option value="">—</option><option>SUS</option><option>Rede privada</option></select></label><label>Lote<input type="text" data-f="lote"></label><label style="flex:1;min-width:120px">Obs.<input type="text" data-f="obs"></label><button class="p" data-addf="ov">+ Registrar</button></div><div id="ovl"></div></section></div>
 <div class="tab" id="tab-tummy" style="display:none"><section><h2>Tummy time</h2>
 <div class="row"><label>Dia<input type="date" id="ttd"></label><label>Hora<input type="time" id="ttt"></label><label>Duração (min)<input type="number" id="ttm" min="1" inputmode="numeric"></label><button class="p" id="tta">+ Registrar</button><label>Meta diária (min)<input type="number" id="ttg" min="1"></label></div>
@@ -407,49 +407,49 @@ function cleanX(o,r){var R=/^\d{4}-\d\d-\d\d$/,T=/^\d\d:\d\d$/,c=o.chk,d,k;r.chk
 var SUG=[["10:30","Contato pele a pele"],["11:00","Registrar mamadas e fraldas"],["14:00","Leitura ou música"],["17:00","Esterilizar mamadeiras"],["19:00","Cortar as unhas (quando precisar)"],["19:00","Foto do dia"],["21:00","Última mamada + arroto"],["22:00","Arrumar o quarto e a bolsa do dia seguinte"]];
 var MSUG=["Sustentou a cabeça","Primeiro sorriso","Primeira risada","Seguiu um objeto com os olhos","Apoiou-se nos antebraços","Levou a mão à boca","Pegou um objeto","Rolou pela primeira vez","Rolou de barriga para baixo","Sentou com apoio","Sentou sem apoio","Engatinhou"];
 var VAC=[
-[0,"bcg","BCG","Dose única","formas graves de tuberculose","SUS"],
-[0,"hepb","Hepatite B","1ª dose (ao nascer)","hepatite B","SUS"],
-[0,"vsr","VSR: anticorpo ou vacina da gestante","Ao nascer, se a mãe não foi vacinada na gestação","bronquiolite e pneumonia por VSR","SUS (gestante) ou rede privada"],
-[2,"penta1","Penta ou Hexavalente (DTP, Hib, hepatite B; a hexavalente inclui a VIP)","1ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (hexa)"],
+[0,"bcg","BCG","Dose única (peso acima de 2.000 g)","formas graves de tuberculose","SUS"],
+[0,"hepb","Hepatite B","1ª dose (ao nascer, de preferência nas primeiras 12 horas)","hepatite B; as próximas doses vêm na penta ou hexavalente (2, 4 e 6 meses) ou, no esquema privado de 3 doses, aos 2 e 6 meses","SUS"],
+[0,"vsr","VSR: vacina da gestante ou anticorpo monoclonal","Ao nascer, se a mãe não foi vacinada na gestação (anticorpo, de preferência na maternidade)","bronquiolite e pneumonia por VSR","SUS: vacina da gestante e anticorpo para prematuros e casos de risco; rede privada: anticorpo para os demais"],
+[2,"penta1","Penta ou Hexavalente (DTP/DTPa, Hib e hepatite B; a hexavalente inclui a VIP)","1ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (DTPa e hexavalente)"],
 [2,"vip1","VIP (pólio inativada)","1ª dose","poliomielite","SUS"],
-[2,"rota1","Rotavírus","1ª dose","diarreia grave; 1ª dose até 11m29d","SUS"],
-[2,"pn1","Pneumocócica conjugada","1ª dose","doenças pneumocócicas","SUS"],
-[3,"mc1","Meningocócica ACWY (ou C)","1ª dose","meningites","SUS (MenC)"],
-[3,"mb1","Meningocócica B","1ª dose","meningite B","Rede privada"],
-[4,"penta2","Penta ou Hexavalente","2ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (hexa)"],
+[2,"rota1","Rotavírus","1ª dose (até 11 meses e 29 dias)","diarreia grave","SUS (RV1) / rede privada (RV5)"],
+[2,"pn1","Pneumocócica conjugada (VPC20; a SBP aceita também VPC15)","1ª dose","doenças pneumocócicas","SUS"],
+[3,"mc1","Meningocócica conjugada ACWY (ou C)","1ª dose (a SBP aceita a partir de 2 meses)","meningites","SUS (MenC)"],
+[3,"mb1","Meningocócica B","1ª dose (a partir de 2 meses)","meningite B","Rede privada"],
+[4,"penta2","Penta ou Hexavalente","2ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (DTPa e hexavalente)"],
 [4,"vip2","VIP (pólio inativada)","2ª dose","poliomielite","SUS"],
-[4,"rota2","Rotavírus","2ª dose (até 23m29d)","diarreia grave","SUS"],
+[4,"rota2","Rotavírus","2ª dose (até 23 meses e 29 dias)","diarreia grave","SUS (RV1) / rede privada (RV5)"],
 [4,"pn2","Pneumocócica conjugada","2ª dose","doenças pneumocócicas","SUS"],
-[5,"mc2","Meningocócica ACWY (ou C)","2ª dose","meningites","SUS (MenC)"],
-[5,"mb2","Meningocócica B","2ª dose","meningite B","Rede privada"],
-[6,"penta3","Penta ou Hexavalente","3ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (hexa)"],
+[5,"mc2","Meningocócica conjugada ACWY (ou C)","2ª dose","meningites","SUS (MenC)"],
+[5,"mb2","Meningocócica B","2ª dose (intervalo mínimo de 2 meses)","meningite B","Rede privada"],
+[6,"penta3","Penta ou Hexavalente","3ª dose","difteria, tétano, coqueluche, Hib e hepatite B","SUS (penta) / rede privada (DTPa e hexavalente)"],
 [6,"vip3","VIP (pólio inativada)","3ª dose","poliomielite","SUS"],
-[6,"pn3","Pneumocócica conjugada","3ª dose (esquema 3+1 da SBP)","doenças pneumocócicas","Rede privada (o SUS usa 2+1)"],
+[6,"pn3","Pneumocócica conjugada (VPC20 ou VPC15)","3ª dose (esquema 3+1 da SBP)","doenças pneumocócicas","Rede privada (o SUS usa 2+1)"],
 [6,"rota3","Rotavírus pentavalente (RV5)","3ª dose, só se usada a RV5","diarreia grave","Rede privada"],
-[6,"flu1","Influenza","1ª dose (anual a partir dos 6 meses)","gripe","SUS"],
-[6,"cov1","Covid-19","1ª dose (esquema conforme a vacina)","covid-19 grave","SUS"],
-[7,"flu2","Influenza","2ª dose (na 1ª temporada), 30 dias após a 1ª","gripe","SUS"],
-[7,"cov2","Covid-19","2ª dose","covid-19 grave","SUS"],
-[9,"cov3","Covid-19","3ª dose","covid-19 grave","SUS"],
-[9,"fa1","Febre amarela","1ª dose","febre amarela","SUS"],
-[12,"pn4","Pneumocócica conjugada","Reforço","doenças pneumocócicas","SUS"],
+[6,"flu1","Influenza","1ª dose (anual, a partir dos 6 meses; 2 doses na primeira vez)","gripe","SUS"],
+[6,"cov1","Covid-19","1ª dose (esquema conforme a vacina e as orientações vigentes)","covid-19 grave","SUS"],
+[7,"flu2","Influenza","2ª dose, 1 mês depois da 1ª (na primeira temporada)","gripe","SUS"],
+[7,"cov2","Covid-19","2ª dose (conforme a vacina)","covid-19 grave","SUS"],
+[9,"cov3","Covid-19","3ª dose (conforme a vacina)","covid-19 grave","SUS"],
+[9,"fa1","Febre amarela","1ª dose (o ideal é guardar 30 dias de intervalo da tríplice viral)","febre amarela","SUS"],
+[12,"pn4","Pneumocócica conjugada","Reforço aos 12 meses (até 15 meses)","doenças pneumocócicas","SUS"],
 [12,"acwy","Meningocócica ACWY","Reforço","meningites A, C, W e Y","SUS"],
-[12,"mb3","Meningocócica B","Reforço (12 a 15 meses)","meningite B","Rede privada"],
+[12,"mb3","Meningocócica B","Reforço (segundo ano de vida)","meningite B","Rede privada"],
 [12,"scr1","Tríplice viral (SCR)","1ª dose","sarampo, caxumba e rubéola","SUS"],
-[12,"var1","Varicela","1ª dose","catapora","SUS (aos 15 meses)"],
-[12,"hepa1","Hepatite A","1ª dose","hepatite A","SUS (1 dose aos 15 meses)"],
+[12,"var1","Varicela","1ª dose (junto da SCR, em aplicações separadas, ou na SCRV)","catapora","SUS (aos 15 meses)"],
+[12,"hepa1","Hepatite A","1ª dose (a partir de 12 meses)","hepatite A","SUS (1 dose aos 15 meses)"],
 [15,"dtp1","DTP / DTPa","1º reforço","difteria, tétano e coqueluche","SUS"],
 [15,"vip4","VIP (pólio inativada)","1º reforço","poliomielite","SUS"],
-[15,"hib4","Hib","4ª dose (se usada vacina com coqueluche acelular)","doenças por Hib","Rede privada ou CRIE"],
-[15,"scr2","SCR ou SCRV (tetra viral)","2ª dose (a SBP prefere a SCRV)","sarampo, caxumba, rubéola e varicela","SUS (SCR)"],
-[18,"hepa2","Hepatite A","2ª dose","hepatite A","Rede privada"],
+[15,"hib4","Hib","4ª dose (se foi usada vacina com coqueluche acelular)","doenças por Hib","Rede privada ou CRIE"],
+[15,"scr2","SCRV (tetraviral) ou SCR + varicela","2ª dose (a SBP prefere a SCRV; intervalo mínimo de 3 meses)","sarampo, caxumba, rubéola e varicela","SUS (SCR)"],
+[18,"hepa2","Hepatite A","2ª dose (6 meses depois da 1ª)","hepatite A","Rede privada"],
 [48,"dtp2","DTP / DTPa","2º reforço (4 a 6 anos)","difteria, tétano e coqueluche","SUS"],
-[48,"vip5","VIP (pólio inativada)","2º reforço","poliomielite","SUS"],
-[48,"fa2","Febre amarela","Reforço (4 anos)","febre amarela","SUS"],
-[48,"var2","Varicela","2ª dose","catapora","SUS (aos 4 anos)"],
-[48,"dengue1","Dengue (Qdenga)","1ª dose a partir de 4 anos (2 doses, 3 meses de intervalo)","dengue","Rede privada"],
+[48,"vip5","VIP (pólio inativada)","2º reforço (4 a 6 anos; no SUS desde agosto de 2026)","poliomielite","SUS"],
+[48,"fa2","Febre amarela","2ª dose (4 anos)","febre amarela","SUS"],
+[48,"var2","Varicela","2ª dose, só se não houve SCRV aos 15 meses (no SUS, aos 4 anos)","catapora","SUS (aos 4 anos)"],
+[48,"dengue1","Dengue (Qdenga)","2 doses com 3 meses de intervalo, a partir de 4 anos","dengue","Rede privada"],
 [60,"acwy2","Meningocócica ACWY","Reforço (5 a 6 anos)","meningites A, C, W e Y","Rede privada"],
-[108,"hpv","HPV","2 doses com 6 meses de intervalo (SBP)","papilomavírus humano","SUS (1 dose) ou rede privada"]];
+[108,"hpv","HPV","2 doses (0 e 6 meses), de preferência HPV9","papilomavírus humano","SUS (HPV4, 1 dose) / rede privada"]];
 var TABS=["hoje","ficha","crescimento","marcos","mamadas","fraldas","sonecas","tummy","check","saude","vacinas","relatorio","alimentacao","seguranca","casa","ajustes"],CD="",TDT="",SDT="",VF=false;
 function ea(s){return esc(s).replace(/"/g,"&quot;")}
 function nowT(){var n=new Date();return p2(n.getHours())+":"+p2(n.getMinutes())}
