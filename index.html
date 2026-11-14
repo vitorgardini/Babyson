@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="Baby’sOn">
 <meta name="theme-color" content="#b5483a">
 <style>
-:root{--bg:#fbf3dc;--card:#fffaf0;--tx:#4a3826;--mu:#8a7258;--ln:#e6d6b0;--red:#b5483a;--yel:#e9b949;--sage:#7f9c6f;--sky:#7fa8b8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#f6f1e9;--card:#fbf8f2;--tx:#2b2420;--mu:#6f6054;--ln:#e4dacb;--red:#b5483a;--yel:#e9b949;--sage:#7f9c6f;--sky:#7fa8b8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a2118;--card:#3a2e22;--tx:#f5e9cf;--mu:#c9b48f;--ln:#5a4936;--red:#e07a6a;--yel:#f0c75e;--sage:#9dbb8c;--sky:#8fb9c9;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#2a2118;--card:#3a2e22;--tx:#f5e9cf;--mu:#c9b48f;--ln:#5a4936;--red:#e07a6a;--yel:#f0c75e;--sage:#9dbb8c;--sky:#8fb9c9;color-scheme:dark}
 *{box-sizing:border-box}
@@ -18,15 +18,15 @@ body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 "Nunito",syste
 .gh{height:16px;background-color:var(--bg);background-image:linear-gradient(90deg,color-mix(in srgb,var(--red) 55%,transparent) 50%,transparent 50%),linear-gradient(color-mix(in srgb,var(--red) 55%,transparent) 50%,transparent 50%);background-size:16px 16px;border-bottom:2px solid var(--red)}
 main{max-width:1100px;margin:0 auto;padding:14px}
 header{text-align:center;padding:10px 0 4px}
-h1{font:900 34px/1.1 "Playfair Display",Georgia,serif;margin:0;color:var(--red)}
+h1{font:900 34px/1.1 ui-serif,"New York",Georgia,serif;margin:0;color:var(--red)}
 .sub{color:var(--mu);margin-top:4px}
 .ducks{font-size:26px;letter-spacing:6px}
-h2{font:700 19px "Playfair Display",Georgia,serif;margin:0 0 10px;color:var(--red)}
+h2{font:700 19px ui-serif,"New York",Georgia,serif;margin:0 0 10px;color:var(--red)}
 section{background:var(--card);border:2px dashed var(--ln);border-radius:18px;padding:14px;margin:14px 0;position:relative}
 section::after{content:var(--se,"🐥");position:absolute;right:12px;top:8px;font-size:20px}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px}
 .k{background:var(--bg);border:1.5px solid var(--ln);border-radius:14px;padding:9px 10px}
-.k span{display:block;color:var(--mu);font-size:12px}.k b{display:block;font:700 22px "Playfair Display",Georgia,serif}.k small{color:var(--mu);font-size:11px}
+.k span{display:block;color:var(--mu);font-size:12px}.k b{display:block;font:700 22px ui-serif,"New York",Georgia,serif}.k small{color:var(--mu);font-size:11px}
 .k.hl{background:color-mix(in srgb,var(--yel) 30%,var(--bg));border-color:var(--yel)}
 input,select,button{font:inherit;color:var(--tx);background:var(--bg);border:1.5px solid var(--ln);border-radius:10px;padding:6px 8px;max-width:100%}
 input[type=number]{width:88px}button{cursor:pointer}
@@ -49,7 +49,7 @@ nav#tabs button.on{background:var(--red);border-color:var(--red);color:#fff}
 .pg{height:12px;border-radius:99px;background:var(--ln);overflow:hidden}.pg i{display:block;height:100%;background:linear-gradient(90deg,var(--yel),var(--sage));border-radius:99px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}.chips button{border-radius:99px;font-size:13px}
 .ta{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1.5px solid var(--ln);border-radius:10px;padding:8px}
-.vg{margin:14px 0 4px;font:700 15px "Playfair Display",Georgia,serif;color:var(--red)}
+.vg{margin:14px 0 4px;font:700 15px ui-serif,"New York",Georgia,serif;color:var(--red)}
 .vr{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;padding:8px 10px;border:1.5px solid var(--ln);border-radius:12px;margin:6px 0;background:var(--bg)}
 .vr small{color:var(--mu)}.vr.ok{border-color:var(--sage);background:color-mix(in srgb,var(--sage) 14%,var(--bg))}
 .bd{font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;border:1.5px solid var(--ln);color:var(--mu);white-space:nowrap}
@@ -85,9 +85,9 @@ nav#tabs #navp button.on{background:var(--red);border-color:var(--red);color:#ff
 nav#tabs{display:flex;align-items:center;gap:12px;overflow:visible;padding:8px 2px}
 nav#tabs #navt{width:46px;height:46px;flex:none;display:flex;align-items:center;justify-content:center;padding:0;border-radius:14px;background:var(--card);border:2px solid var(--ln);color:var(--tx);box-shadow:none;font-size:inherit}
 .bars{display:flex;flex-direction:column;gap:5px}.bars i{display:block;width:22px;height:3px;border-radius:2px;background:currentColor}
-#navl{font:700 18px "Playfair Display",Georgia,serif;color:var(--red)}
+#navl{font:700 18px ui-serif,"New York",Georgia,serif;color:var(--red)}
 nav#tabs #navp{display:flex;flex-direction:column;gap:2px;position:fixed;left:0;top:0;bottom:0;right:auto;width:min(82vw,300px);max-height:none;border-radius:0 20px 20px 0;border:0;border-right:3px solid var(--yel);padding:calc(18px + env(safe-area-inset-top,0px)) 12px 18px;transform:translateX(-105%);visibility:hidden;transition:transform .22s ease,visibility .22s;z-index:40;overflow-y:auto;box-shadow:6px 0 24px rgba(0,0,0,.3);grid-template-columns:none}
-nav#tabs #navp::before{content:"Baby’sOn";display:block;font:900 20px "Playfair Display",Georgia,serif;color:var(--red);padding:2px 10px 12px}
+nav#tabs #navp::before{content:"Baby’sOn";display:block;font:900 20px ui-serif,"New York",Georgia,serif;color:var(--red);padding:2px 10px 12px}
 nav#tabs #navp.open{display:flex;transform:none;visibility:visible}
 nav#tabs #navp button{display:block;width:100%;text-align:left;margin:0;padding:13px 14px;border-radius:12px;font-size:16px}
 #navs{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:39}
@@ -105,6 +105,25 @@ nav#tabs #navp button{display:block;width:100%;text-align:left;margin:0;padding:
 .qgo{width:100%;padding:14px;font-size:16px}.qbtn{flex:1;padding:14px 8px;font-size:16px;font-weight:700}
 .rpv{background:#fff;color:#222;border-radius:12px;padding:12px;margin-top:10px}.rpv h3{margin:0 0 8px;color:#b5483a}.rps ul{margin:4px 0 10px 18px;padding:0}
 @media print{body *{visibility:hidden}#rpv,#rpv *{visibility:visible}#rpv{position:absolute;left:0;top:0;width:100%}}
+
+/* ===== Redesign etapa 1: base editorial + tela Hoje ===== */
+body.ish .ducks{display:none}body.ish #av{height:0;margin:0}body.ish #avi,body.ish #avp,body.ish #avb{display:none}
+#hhero{margin:6px 0}
+.hh{position:relative;border-radius:28px;overflow:hidden;height:300px;background:linear-gradient(160deg,#ead9c3,#d9b99a 55%,#b98f73)}
+.hh img{width:100%;height:100%;object-fit:cover;display:block}
+.hh .sh{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(transparent,rgba(30,20,12,.66))}
+.hh .tx{position:absolute;left:20px;right:20px;bottom:18px;color:#fff}
+.hh .tx b{display:block;font:400 30px/1.1 ui-serif,"New York",Georgia,serif}.hh .tx span{display:block;margin-top:4px;font-size:14px}
+.hh button{position:absolute;right:14px;top:14px;background:rgba(255,255,255,.92);color:#2b2420;border:0;border-radius:12px;padding:9px 14px;font-weight:600}
+.hh .ph{position:absolute;left:0;right:0;top:56px;text-align:center;color:#fff;font-size:14px}
+#tab-hoje section{background:none;border:0;border-radius:0;padding:0;margin:32px 0}
+#tab-hoje section::after{display:none}
+#tab-hoje h2{font:400 24px/1.2 ui-serif,"New York",Georgia,serif;color:var(--tx);margin:0 0 14px}
+#tab-hoje .k{background:none;border:0;border-top:1px solid var(--ln);border-radius:0;padding:12px 2px}
+#tab-hoje .k.hl{background:none;border-top-color:var(--red)}
+#tab-hoje .k b{font:400 28px/1.1 ui-serif,"New York",Georgia,serif}
+#tab-hoje .qc{border:0;background:var(--card);border-radius:20px;padding:14px}
+#tab-hoje .al{border:0;border-radius:16px}
 </style></head><body>
 <div class="gh"></div>
 <main>
@@ -200,6 +219,7 @@ nav#tabs #navp button{display:block;width:100%;text-align:left;margin:0;padding:
 <section><h2>Privacidade</h2><div class="note"><b>O que fica guardado:</b> o que você registra: nome, nascimento e sexo do bebê, medidas, mamadas, sono, fraldas, vacinas, consultas, remédios, intercorrências, alimentação, marcos, contatos e a foto. Isso inclui informações de saúde de uma criança, que a LGPD trata com proteção reforçada (arts. 11 e 14).<br><br><b>Onde fica:</b> só neste aparelho, no armazenamento do navegador ou do app. O Baby’sOn não tem servidor, conta nem análise de uso, e o autor não recebe os seus dados. O endereço do site fica no GitHub Pages, que registra acessos (como o IP), como qualquer site.<br><br><b>O que sai do aparelho, só se você mandar:</b> o backup, o relatório ao pediatra e o botão Compartilhar levam dados para o app que você escolher (WhatsApp, e-mail, Notas…). Os links 📅 (Google Agenda) e 📍 (Google Maps) enviam ao Google o texto do evento ou o endereço quando você toca neles. O backup completo é criptografado com a sua senha; o relatório e o “backup em texto” das mamadas não são.<br><br><b>Seus direitos:</b> você vê, corrige e apaga tudo aqui mesmo: edite os registros ou use “Apagar tudo” em Meus dados. Use bloqueio de tela no celular.<br><br><b>Crianças:</b> o app é para pais e responsáveis registrarem dados do próprio filho.</div></section>
 <section><h2>Sobre o Baby’sOn</h2><div class="note">Protótipo de teste para acompanhar mamadas, sono, fraldas, vacinas, consultas e crescimento. Não faz diagnóstico nem substitui o pediatra. O calendário de vacinação e o de consultas seguem o Ministério da Saúde; confira sempre com a sua Caderneta e com o pediatra. Dúvidas ou ideias? Conte para quem te enviou o link.</div></section></div>
 <div class="tab" id="tab-hoje">
+<div id="hhero"></div>
 <section><h2>Registro rápido</h2>
 <div class="row" style="align-items:center"><label>Quando foi?<select id="qw"><option value="0">Agora</option><option value="5">5 min atrás</option><option value="10">10 min atrás</option><option value="15">15 min atrás</option><option value="30">30 min atrás</option><option value="60">1 hora atrás</option><option value="x">Outro horário…</option></select></label><input type="time" id="qx" style="display:none"></div>
 <div class="qg">
@@ -1158,6 +1178,12 @@ function renderCurves(){var I=pctInfo(),ids=["cv1","cv2","cv3","cv4","cv5"];
  $("cv1").innerHTML=pctChart("w",I.sx,I.pw,0,xm);$("cv2").innerHTML=pctChart("l",I.sx,I.ph,0,xm);$("cv3").innerHTML=pctChart("h",I.sx,I.pc,0,xm);$("cv5").innerHTML=pctChart("b",I.sx,I.pb,0,xm);
  var hm=Math.max.apply(null,I.wl.map(function(p){return p.x}).concat([60]));$("cv4").innerHTML=pctChart("wl",I.sx,I.wl,45,Math.min(110,Math.ceil((hm+8)/5)*5))}
 
+
+/* ===== Redesign etapa 1: foto de destaque da tela Hoje ===== */
+function renderHero(){var e=$("hhero");if(!e||!D||!D.baby||!D.baby.nasc)return;var h=new Date().getHours(),g=h<12?"Bom dia":h<18?"Boa tarde":"Boa noite",ul=($("hlast").textContent||"").split(" · ")[0]||"Tudo pronto para o primeiro registro do dia",nm=BN&&BN!=="Bebê"?esc(BN)+", ":"";
+ e.innerHTML='<div class="hh">'+(D.avatar?'<img alt="Foto do bebê" src="'+D.avatar+'">':'<div class="ph"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M22 40V20M22 24C22 16 16 12 8 12c0 8 6 12 14 12ZM22 20c0-7 5-11 13-11 0 7-5 11-13 11Z"/></svg><div>Adicione uma foto do bebê</div></div>')+'<div class="sh"></div><div class="tx"><b>'+g+'.</b><span>'+nm+esc(ageTxt(today()))+'</span><span>'+esc(ul)+'</span></div><button data-hero="1">'+(D.avatar?"Trocar foto":"Adicionar foto")+'</button></div>'}
+(function(){var r0=render;render=function(){r0();renderHero()};var s0=showTab;showTab=function(t){s0(t);document.body.classList.toggle("ish",$("tab-hoje").style.display!=="none")};
+ document.addEventListener("click",function(e){var b=e.target.closest?e.target.closest("[data-hero]"):null;if(b)$("avf").click()})})();
 if($("cmd"))$("cmd").value=today();
 initApp();
 try{if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0)navigator.serviceWorker.register("sw.js")}catch(x){}

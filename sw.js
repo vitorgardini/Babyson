@@ -1,6 +1,6 @@
 // Baby’sOn — service worker restrito: cuida só dos arquivos do próprio app.
 // Estratégia: tenta a rede primeiro (pega a versão nova) e usa o cache quando estiver offline.
-const CACHE = "babyson-v8";
+const CACHE = "babyson-v9";
 const ESSENCIAIS = ["./", "./index.html", "./manifest.json"];
 const ICONES = ["./icon-180.png", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 const PERMITIDOS = new Set(
